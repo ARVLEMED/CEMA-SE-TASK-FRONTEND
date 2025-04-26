@@ -1,0 +1,243 @@
+.client-edit-container {
+    min-height: 100vh;
+    background-color: #f5f7fa;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .client-edit-card {
+    max-width: 600px;
+    width: 100%;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .client-edit-card h2,
+  .client-edit-card h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #333;
+    text-align: center;
+  }
+  
+  .client-edit-card h3 {
+    font-size: 1.25rem;
+    margin-top: 20px;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+  
+  .form-group label {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #555;
+  }
+  
+  .form-group input,
+  .form-group select {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.3s ease;
+  }
+  
+  .form-group input:focus,
+  .form-group select:focus {
+    border-color: #00c4cc;
+  }
+  
+  form button,
+  .cancel-btn,
+  .enroll-btn,
+  .unenroll-btn {
+    padding: 10px;
+    border: none;
+    border-radius: 25px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+  }
+  
+  form button {
+    background-color: #00c4cc;
+    color: white;
+  }
+  
+  form button:hover {
+    background-color: #00b3b8;
+  }
+  
+  .cancel-btn {
+    background-color: #999;
+    color: white;
+  }
+  
+  .cancel-btn:hover {
+    background-color: #888;
+  }
+  
+  button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+  
+  button:active:not(:disabled) {
+    transform: scale(0.98);
+  }
+  
+  .error-message {
+    color: #ff4d4f;
+    text-align: center;
+    font-size: 0.9rem;
+  }
+  
+  .success-message {
+    color: #52c41a;
+    text-align: center;
+    font-size: 0.9rem;
+  }
+  
+  /* New Styles for Enrollment Section */
+  .enrollment-section {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .enrollment-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .enrollment-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    color: #333;
+  }
+  
+  .unenroll-btn {
+    background-color: #ff4d4f;
+    color: white;
+    padding: 5px 10px;
+    font-size: 0.8rem;
+  }
+  
+  .unenroll-btn:hover {
+    background-color: #e63946;
+  }
+  
+  .enroll-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .program-select {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    height: 100px;
+    outline: none;
+  }
+  
+  .program-select:focus {
+    border-color: #00c4cc;
+  }
+  
+  .enroll-btn {
+    background-color: #00c4cc;
+    color: white;
+  }
+  
+  .enroll-btn:hover {
+    background-color: #00b3b8;
+  }
+  
+  @media (max-width: 768px) {
+    .client-edit-card {
+      margin: 10px;
+      padding: 15px;
+    }
+  
+    .client-edit-card h2 {
+      font-size: 1.25rem;
+    }
+  
+    .client-edit-card h3 {
+      font-size: 1rem;
+    }
+  
+    .form-group label,
+    .form-group input,
+    .form-group select,
+    .program-select {
+      font-size: 0.9rem;
+    }
+  
+    form button,
+    .cancel-btn,
+    .enroll-btn {
+      font-size: 0.9rem;
+    }
+  
+    .unenroll-btn {
+      font-size: 0.7rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .client-edit-card h2 {
+      font-size: 1.1rem;
+    }
+  
+    .client-edit-card h3 {
+      font-size: 0.9rem;
+    }
+  
+    .form-group label,
+    .form-group input,
+    .form-group select,
+    .program-select {
+      font-size: 0.8rem;
+    }
+  
+    form button,
+    .cancel-btn,
+    .enroll-btn {
+      font-size: 0.8rem;
+      padding: 8px;
+    }
+  
+    .unenroll-btn {
+      font-size: 0.6rem;
+      padding: 4px 8px;
+    }
+  }

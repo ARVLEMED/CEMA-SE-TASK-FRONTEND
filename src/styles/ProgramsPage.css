@@ -1,0 +1,298 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+  }
+  
+  .container {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Programs Section */
+  .programs-section {
+    flex: 1;
+    background-color: #f5f7fa; /* Matches ConsultationPage */
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  /* Programs Header */
+  .programs-header {
+    width: 100%;
+    max-width: 900px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+  
+  .programs-header h2 {
+    font-size: 1.8rem;
+    color: #333; /* Matches AboutPage */
+    font-weight: bold;
+  }
+  
+  /* Search Bar */
+  .search-bar {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+  
+  .search-bar input {
+    padding: 10px 40px 10px 16px;
+    border: 1px solid #ddd; /* Matches AboutPage */
+    border-radius: 20px;
+    font-size: 1rem;
+    width: 300px;
+    transition: border-color 0.3s ease;
+  }
+  
+  .search-bar input:focus {
+    outline: none;
+    border-color: #00c4cc; /* Theme accent */
+    box-shadow: 0 0 0 3px rgba(0, 196, 204, 0.1);
+  }
+  
+  .search-bar .search-icon {
+    position: absolute;
+    right: 12px;
+    font-size: 1.1rem;
+    color: #888; /* Matches AboutPage footer */
+  }
+  
+  /* Add Program Button */
+  .add-program-btn {
+    background-color: #00c4cc; /* Theme accent */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+  }
+  
+  .add-program-btn:hover {
+    background-color: #00b3b8; /* Matches ConsultationPage */
+  }
+  
+  .add-program-btn:active {
+    transform: scale(0.98);
+  }
+  
+  /* Add Program Form */
+  .add-program-form {
+    width: 100%;
+    max-width: 900px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Matches ConsultationPage */
+    padding: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .form-group label {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #374151; /* Matches ConsultationPage */
+  }
+  
+  .form-group input,
+  .form-group textarea {
+    padding: 10px;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    font-size: 1rem;
+    color: #1f2937;
+    transition: border-color 0.2s ease;
+  }
+  
+  .form-group input:focus,
+  .form-group textarea:focus {
+    outline: none;
+    border-color: #00c4cc;
+    box-shadow: 0 0 0 3px rgba(0, 196, 204, 0.1);
+  }
+  
+  .form-group textarea {
+    resize: vertical;
+    min-height: 100px;
+  }
+  
+  .submit-program-btn {
+    background-color: #00c4cc;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+    align-self: flex-end;
+  }
+  
+  .submit-program-btn:hover {
+    background-color: #00b3b8;
+  }
+  
+  .submit-program-btn:active {
+    transform: scale(0.98);
+  }
+  
+  /* Programs List */
+  .programs-list {
+    width: 100%;
+    max-width: 900px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Matches ConsultationPage */
+    padding: 20px;
+  }
+  
+  .program-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 0;
+    border-bottom: 1px solid #eee;
+    transition: background-color 0.2s ease;
+  }
+  
+  .program-item:hover {
+    background-color: #f9f9f9; /* Matches AboutPage */
+  }
+  
+  .program-item:last-child {
+    border-bottom: none;
+  }
+  
+  .program-info {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+  
+  .program-name {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .program-meta {
+    font-size: 0.9rem;
+    color: #888; /* Matches AboutPage footer */
+  }
+  
+  .program-description {
+    font-size: 0.95rem;
+    color: #555; /* Matches AboutPage text */
+  }
+  
+  /* Program Actions */
+  .program-actions {
+    display: flex;
+    gap: 12px;
+  }
+  
+  .action-icon {
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: color 0.2s ease, transform 0.1s ease;
+  }
+  
+  .action-icon:hover {
+    transform: scale(1.1);
+  }
+  
+  .action-icon.edit {
+    color: #00c4cc; /* Theme accent */
+  }
+  
+  .action-icon.delete {
+    color: #ff4040;
+  }
+  
+  /* No Programs Message */
+  .no-programs {
+    text-align: center;
+    font-size: 1.1rem;
+    color: #555; /* Matches AboutPage text */
+    padding: 20px;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .programs-section {
+      padding: 20px 15px;
+    }
+  
+    .programs-header {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 10px;
+    }
+  
+    .search-bar input {
+      width: 100%;
+      max-width: 400px;
+    }
+  
+    .programs-header h2 {
+      font-size: 1.5rem;
+    }
+  
+    .add-program-form {
+      padding: 15px;
+    }
+  
+    .program-item {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 10px;
+    }
+  
+    .program-actions {
+      width: 100%;
+      justify-content: flex-end;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .programs-list {
+      padding: 15px;
+    }
+  
+    .program-name {
+      font-size: 1rem;
+    }
+  
+    .program-meta,
+    .program-description,
+    .no-programs {
+      font-size: 0.9rem;
+    }
+  
+    .action-icon {
+      font-size: 1.1rem;
+    }
+  }

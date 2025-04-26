@@ -1,0 +1,180 @@
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* About Page Container */
+  .about-container {
+    width: 80%;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    line-height: 1.6;
+    background-color: #f9f9f9; /* Matches your original background */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Matches your original shadow */
+    min-height: calc(100vh - 120px); /* Adjust for navbar/footer */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  /* Header Section */
+  .about-header {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  .about-header h1 {
+    font-size: 2.5rem;
+    color: #333; /* Matches your original heading color */
+    font-weight: bold;
+    transition: color 0.3s ease;
+  }
+  
+  .about-header h1:hover {
+    color: #00c4cc; /* Theme accent from ConsultationPage */
+  }
+  
+  /* Content Section */
+  .about-content {
+    width: 100%;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Matches ConsultationPage shadow */
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+  
+  /* Description Section */
+  .about-description p {
+    font-size: 1.1rem;
+    color: #555; /* Matches your original text color */
+    text-align: justify;
+    text-indent: 20px;
+    margin-bottom: 20px;
+    transition: color 0.3s ease;
+  }
+  
+  .about-description p:hover {
+    color: #374151; /* Slightly darker for interaction, matches ConsultationPage */
+  }
+  
+  .about-description p:last-child {
+    margin-bottom: 0; /* Matches your original style */
+  }
+  
+  /* System Features Section */
+  .about-system h2 {
+    font-size: 1.8rem;
+    color: #333; /* Matches header color */
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .about-system p {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 15px;
+  }
+  
+  .about-system ul {
+    list-style: none;
+    padding-left: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .about-system ul li {
+    font-size: 1.1rem;
+    color: #555;
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 12px;
+    transition: color 0.3s ease;
+  }
+  
+  .about-system ul li:hover {
+    color: #374151;
+  }
+  
+  .about-system ul li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: #00c4cc; /* Theme accent from ConsultationPage */
+    font-size: 1.5rem;
+    line-height: 1.1rem;
+  }
+  
+  .about-system p:last-child {
+    margin-bottom: 0;
+  }
+  
+  /* Footer Info (Optional) */
+  .footer-info {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 0.9rem;
+    color: #888; /* Matches your original footer color */
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .about-container {
+      width: 90%;
+      padding: 20px 15px;
+    }
+  
+    .about-header h1 {
+      font-size: 2rem;
+    }
+  
+    .about-content {
+      padding: 20px;
+    }
+  
+    .about-description p,
+    .about-system p,
+    .about-system ul li {
+      font-size: 1rem;
+      text-indent: 15px;
+    }
+  
+    .about-system h2 {
+      font-size: 1.5rem;
+    }
+  
+    .about-system ul li {
+      padding-left: 20px;
+    }
+  
+    .about-system ul li::before {
+      font-size: 1.3rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .about-container {
+      width: 95%;
+    }
+  
+    .about-header h1 {
+      font-size: 1.8rem;
+    }
+  
+    .about-content {
+      padding: 15px;
+    }
+  
+    .about-description p,
+    .about-system p,
+    .about-system ul li {
+      font-size: 0.9rem;
+      text-indent: 10px;
+    }
+  }
