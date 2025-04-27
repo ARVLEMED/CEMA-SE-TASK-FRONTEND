@@ -16,7 +16,7 @@ const Signup = () => {
     if (success) {
       const timer = setTimeout(() => {
         navigate('/login');
-      }, 3000); // Redirect after 3 seconds
+      }, 1000); 
       return () => clearTimeout(timer);
     }
   }, [success, navigate]);
@@ -56,9 +56,7 @@ const Signup = () => {
         throw new Error(data.message || 'Signup failed');
       }
 
-      // OPTIONAL: If you want to auto-login after signup
-      // localStorage.setItem('accessToken', data.access_token);
-      // navigate('/dashboard'); // Redirect to a protected page
+      
 
       setSuccess('Account created successfully! Please log in.');
     } catch (err) {

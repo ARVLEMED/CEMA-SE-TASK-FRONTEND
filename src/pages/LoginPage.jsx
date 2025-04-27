@@ -16,7 +16,7 @@ const Login = () => {
     if (success) {
       const timer = setTimeout(() => {
         navigate('/home');
-      }, 2000); // Redirect after 2 seconds
+      }, 1000); 
       return () => clearTimeout(timer);
     }
   }, [success, navigate]);

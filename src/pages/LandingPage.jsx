@@ -7,7 +7,7 @@ function LandingPage() {
   return (
     <div className="landing-container">
       {/* Navbar */}
-      <LandingNavbar />  {/* Corrected this line */}
+      <LandingNavbar />  
 
       {/* Hero Section */}
       <section className="hero">
