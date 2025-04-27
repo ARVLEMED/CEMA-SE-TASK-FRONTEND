@@ -26,7 +26,7 @@ const ClientEdit = () => {
       }
 
       try {
-        const response = await fetch(`https://cema-se-task-backend.onrender.com/api/clients/${id}`, {
+        const response = await fetch(`http://localhost:5000/api/clients/${id}`, {
           headers: { Authorization: `Bearer ${token}` },
         });
         if (!response.ok) {
@@ -56,7 +56,7 @@ const ClientEdit = () => {
       }
 
       try {
-        const response = await fetch('https://cema-se-task-backend.onrender.com/api/programs', {
+        const response = await fetch('http://localhost:5000/api/programs', {
           headers: { Authorization: `Bearer ${token}` },
         });
         if (!response.ok) {
@@ -104,7 +104,7 @@ const ClientEdit = () => {
     setLoading(true);
     try {
       for (const programId of selectedPrograms) {
-        const response = await fetch('https://cema-se-task-backend.onrender.com/api/enrollments', {
+        const response = await fetch('http://localhost:5000/api/enrollments', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -123,7 +123,7 @@ const ClientEdit = () => {
         }
       }
 
-      const response = await fetch(`https://cema-se-task-backend.onrender.com/api/clients/${id}`, {
+      const response = await fetch(`http://localhost:5000/api/clients/${id}`, {
         headers: { Authorization: `Bearer ${token}` },
       });
       const data = await response.json();
@@ -148,7 +148,7 @@ const ClientEdit = () => {
     setLoading(true);
     try {
       console.log(`Attempting to unenroll with enrollmentId: ${enrollmentId}`); // Debugging
-      const response = await fetch(`https://cema-se-task-backend.onrender.com/api/enrollments/${enrollmentId}`, {
+      const response = await fetch(`http://localhost:5000/api/enrollments/${enrollmentId}`, {
         method: 'DELETE',
         headers: { Authorization: `Bearer ${token}` },
       });
@@ -163,7 +163,7 @@ const ClientEdit = () => {
         throw new Error(data.message || 'Failed to unenroll client');
       }
 
-      const clientResponse = await fetch(`https://cema-se-task-backend.onrender.com/api/clients/${id}`, {
+      const clientResponse = await fetch(`http://localhost:5000/api/clients/${id}`, {
         headers: { Authorization: `Bearer ${token}` },
       });
       const clientData = await clientResponse.json();
@@ -197,7 +197,7 @@ const ClientEdit = () => {
     }
 
     try {
-      const response = await fetch(`https://cema-se-task-backend.onrender.com/api/clients/${id}`, {
+      const response = await fetch(`http://localhost:5000/api/clients/${id}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',

@@ -42,7 +42,7 @@ function Consultation() {
     }
 
     try {
-      const response = await fetch('https://cema-se-task-backend.onrender.com/api/clients?status=waiting', {
+      const response = await fetch('http://localhost:5000/api/clients?status=waiting', {
         headers: { Authorization: `Bearer ${token}` },
       });
       if (!response.ok) {
@@ -70,7 +70,7 @@ function Consultation() {
     }
 
     try {
-      const response = await fetch('https://cema-se-task-backend.onrender.com/api/programs', {
+      const response = await fetch('http://localhost:5000/api/programs', {
         headers: { Authorization: `Bearer ${token}` },
       });
       if (!response.ok) {
@@ -139,7 +139,7 @@ function Consultation() {
         treatment_plan: consultationData.treatmentPlan,
       };
 
-      const response = await fetch('https://cema-se-task-backend.onrender.com/api/consultations', {
+      const response = await fetch('http://localhost:5000/api/consultations', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -188,7 +188,7 @@ function Consultation() {
     }
 
     try {
-      const response = await fetch('https://cema-se-task-backend.onrender.com/api/enrollments', {
+      const response = await fetch('http://localhost:5000/api/enrollments', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -226,7 +226,7 @@ function Consultation() {
     }
 
     try {
-      const response = await fetch(`https://cema-se-task-backend.onrender.com/api/clients/${selectedClient.id}`, {
+      const response = await fetch(`http://localhost:5000/api/clients/${selectedClient.id}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',

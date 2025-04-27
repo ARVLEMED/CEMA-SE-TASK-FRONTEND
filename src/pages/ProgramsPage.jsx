@@ -26,7 +26,7 @@ function Programs() {
     }
 
     try {
-      const response = await fetch(`https://cema-se-task-backend.onrender.com/api/programs?search=${search}`, {
+      const response = await fetch(`http://localhost:5000/api/programs?search=${search}`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -65,7 +65,7 @@ function Programs() {
     }
 
     try {
-      const response = await fetch('https://cema-se-task-backend.onrender.com/api/programs', {
+      const response = await fetch('http://localhost:5000/api/programs', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -106,7 +106,7 @@ function Programs() {
     }
 
     try {
-      const response = await fetch(`https://cema-se-task-backend.onrender.com/api/programs/${id}`, {
+      const response = await fetch(`http://localhost:5000/api/programs/${id}`, {
         method: 'DELETE',
         headers: {
           Authorization: `Bearer ${token}`,

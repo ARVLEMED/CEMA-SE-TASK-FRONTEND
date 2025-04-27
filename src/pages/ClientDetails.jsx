@@ -23,7 +23,7 @@ const ClientDetail = () => {
 
       try {
         // Fetch client
-        const clientResponse = await fetch(`https://cema-se-task-backend.onrender.com/api/clients/${id}`, {
+        const clientResponse = await fetch(`http://localhost:5000/api/clients/${id}`, {
           headers: { Authorization: `Bearer ${token}` },
         });
         if (!clientResponse.ok) {
@@ -38,7 +38,7 @@ const ClientDetail = () => {
         setClient(clientData);
 
         // Fetch consultations
-        const consultationsResponse = await fetch(`https://cema-se-task-backend.onrender.com/api/consultations?client_id=${id}`, {
+        const consultationsResponse = await fetch(`http://localhost:5000/api/consultations?client_id=${id}`, {
           headers: { Authorization: `Bearer ${token}` },
         });
         if (!consultationsResponse.ok) throw new Error('Failed to fetch consultations');
@@ -46,7 +46,7 @@ const ClientDetail = () => {
         setConsultations(consultationsData);
 
         // Fetch all programs
-        const programsResponse = await fetch('https://cema-se-task-backend.onrender.com/api/programs', {
+        const programsResponse = await fetch('http://localhost:5000/api/programs', {
           headers: { Authorization: `Bearer ${token}` },
         });
         if (!programsResponse.ok) throw new Error('Failed to fetch programs');

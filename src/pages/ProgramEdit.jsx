@@ -23,7 +23,7 @@ const ProgramEdit = () => {
       }
 
       try {
-        const response = await fetch(`https://cema-se-task-backend.onrender.com/api/programs/${id}`, {
+        const response = await fetch(`http://localhost:5000/api/programs/${id}`, {
           headers: { Authorization: `Bearer ${token}` },
         });
         if (!response.ok) {
@@ -58,7 +58,7 @@ const ProgramEdit = () => {
     }
 
     try {
-      const response = await fetch(`https://cema-se-task-backend.onrender.com/api/programs/${id}`, {
+      const response = await fetch(`http://localhost:5000/api/programs/${id}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',

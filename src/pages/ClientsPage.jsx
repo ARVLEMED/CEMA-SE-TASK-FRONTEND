@@ -26,7 +26,7 @@ function ClientsPage() {
         navigate('/login');
         return;
       }
-      const response = await fetch('https://cema-se-task-backend.onrender.com/api/user', {
+      const response = await fetch('http://localhost:5000/api/user', {
         headers: { Authorization: `Bearer ${token}` },
       });
       if (!response.ok) {
@@ -48,7 +48,7 @@ function ClientsPage() {
         navigate('/login');
         return;
       }
-      const response = await fetch(`https://cema-se-task-backend.onrender.com/api/clients?search=${search}`, {
+      const response = await fetch(`http://localhost:5000/api/clients?search=${search}`, {
         headers: { Authorization: `Bearer ${token}` },
       });
       if (!response.ok) {
@@ -73,7 +73,7 @@ function ClientsPage() {
         navigate('/login');
         return;
       }
-      const response = await fetch('https://cema-se-task-backend.onrender.com/api/programs', {
+      const response = await fetch('http://localhost:5000/api/programs', {
         headers: { Authorization: `Bearer ${token}` },
       });
       if (!response.ok) {
@@ -116,7 +116,7 @@ function ClientsPage() {
         navigate('/login');
         return;
       }
-      const response = await fetch(`https://cema-se-task-backend.onrender.com/api/clients/${id}`, {
+      const response = await fetch(`http://localhost:5000/api/clients/${id}`, {
         method: 'DELETE',
         headers: { Authorization: `Bearer ${token}` },
       });

@@ -25,7 +25,7 @@ const RegisterClient = () => {
       }
 
       try {
-        const response = await fetch('https://cema-se-task-backend.onrender.com/api/programs', {
+        const response = await fetch('http://localhost:5000/api/programs', {
           headers: { Authorization: `Bearer ${token}` },
         });
         if (!response.ok) {
@@ -72,7 +72,7 @@ const RegisterClient = () => {
 
     try {
       // Step 1: Create the client
-      const clientResponse = await fetch('https://cema-se-task-backend.onrender.com/api/clients', {
+      const clientResponse = await fetch('http://localhost:5000/api/clients', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -97,7 +97,7 @@ const RegisterClient = () => {
       // Step 2: Enroll the client in selected programs (if any)
       if (selectedPrograms.length > 0) {
         for (const programId of selectedPrograms) {
-          const enrollResponse = await fetch('https://cema-se-task-backend.onrender.com/api/enrollments', {
+          const enrollResponse = await fetch('http://localhost:5000/api/enrollments', {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json',
