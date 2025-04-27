@@ -1,61 +1,94 @@
 body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    scroll-behavior: smooth;
-  }
-  
-  .navbar {
-    background-color: #00e0ff;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-  }
-  
-  .logo {
-    height: 50px;
-  }
-  .logo-img{
-    height: 60px;
-    width: 60px;
-    border-radius: 50%;
-    margin-bottom: 50px;
-  }
-  
-  .nav-links {
-    list-style: none;
-    display: flex;
-    gap: 30px;
-  }
-  
-  .nav-links a {
-    text-decoration: none;
-    color: black;
-    font-weight: bold;
-  }
-  
-  .hero {
-    width: 100%;
-    height: 80vh;
-    overflow: hidden;
-  }
-  
-  .hero-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-  
-  .section {
-    padding: 60px 20px;
-    text-align: center;
-    background-color: #f8f8f8;
-  }
-  
-  .footer {
-    background-color: #00e0ff;
-    padding: 30px;
-    text-align: center;
-    font-weight: bold;
-  }
-  
+  margin: 0;
+  font-family: Arial, sans-serif;
+  scroll-behavior: smooth;
+}
+
+.navbar {
+  background-color: #00e0ff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.logo {
+  height: 50px;
+}
+
+.logo-img {
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  margin-bottom: 50px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  margin-right: 70px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+
+.hero {
+  text-align: center;
+  padding: 50px;
+  background-image: url('../src/assets/hospital.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 80vh; /* Use min-height instead of height */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.download-btn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 15px 30px;
+  font-size: 18px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  margin-top: 20px;
+  display: inline-block;
+  text-decoration: none;
+  max-width: 300px;
+  width: 100%;
+  text-align: center;
+}
+
+.download-btn:hover {
+  background-color: #45a049;
+}
+
+.hero-img {
+  display: none;
+}
+
+.section {
+  padding: 60px 20px;
+  text-align: center;
+  background-color: #f8f8f8;
+  margin-top: 20px; /* Adds space between sections */
+}
+
+.footer {
+  background-color: #00e0ff;
+  padding: 30px;
+  text-align: center;
+  font-weight: bold;
+}
+
+/* Clear any float issues */
+* {
+  box-sizing: border-box;
+}
